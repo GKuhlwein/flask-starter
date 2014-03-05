@@ -13,5 +13,16 @@ def example_form():
         return render_template('greeting.html',
                                fullname=request.form['fullname'])
 
+@app.route("/my-new-page")
+def my_new_function():
+    print 'HELLO FROM MY NEW FUNCTION'
+    return render_template('new-page.html')
+    
+    
+@app.route("/new")
+def new():
+    return render_template('new.html')
+
+
 if __name__ == "__main__":
     app.run(debug=True)
