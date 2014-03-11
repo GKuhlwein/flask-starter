@@ -12,7 +12,7 @@ def example_form():
     elif request.method == 'POST':
         return render_template('greeting.html',
                                fullname=request.form['fullname'])
-@app.route("/my-new-page")
+@app.route("/my-new-page", methods=["GET","POST"])
 def my_new_function():
     print 'HELLO FROM MY NEW FUNCTION'
     if request.method == 'GET':
@@ -25,6 +25,7 @@ def my_new_function():
 @app.route("/new")
 def new():
     return render_template('new.html')
+	
 
 
 if __name__ == "__main__":
