@@ -1,8 +1,5 @@
-<html>
-  <head>
-    <title>First Flask Application</title>
-    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
-  </head>
+{% extends 'base.html' %}
+{% block content %}
   <body>
     <h1>Hello, World!</h1>
     <p>Click on the links in the list below to see what I've made</p>
@@ -12,4 +9,4 @@
     </ol>
     <p>Not much so far, it's your job to add to this ...</p>
   </body>
-</html>
+{% endblock %}
