@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <h1>Sign up.</h1>
+    <form action="/" method="Post">
+      <p>First name? </p>
+      <input type="text" name="firstname"/>
+	  <p>Last name?</p>
+	  <input type="text" name="lastname"/>
+	  <p>Email</p>
+	  <input type="text"/>
+      <input type="submit" value="Done"/>
+    </form>
+	{% if firstname, lastname %}
+		<p>Welcome {{firstname}} {{lastname}}!</p>
+	{% endif %}
+  </body>
+</html>

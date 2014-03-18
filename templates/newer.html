@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+  <body>
+    <form action='/tip' method='post'>
+      <input type= 'text' value='Cost of meal' name='mealcost'/>
+	  <input type= 'text' value='tax' name='tax'/>
+	  <input type= 'text' value='tip' name='tip'/>
+      <input type= 'submit' value='compute'/>
+    </form>
+	{% if tip %}
+		<p>Tip equals: {{tip}}</p>
+	{% endif %}
+	{% if mealcost %}
+		<p>Cost of meal equals: {{mealcost}}</p>
+	{% endif %}
+	{% if tax %}
+		<p>Tax equals: {{tax}}</p>
+	{% endif %}
+  </body>
+{% endblock %}
