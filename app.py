@@ -25,16 +25,25 @@ def my_new_function():
 @app.route("/new")
 def new():
     return render_template('new.html')
-	
+
 @app.route("/tip", methods=["GET","POST"])
 def tip():
     if request.method == 'GET':
         return render_template('newer.html')
-    elif request.method == 'POST':
+    elif request.method == 'POST':	
+        tip=float(request.form['tip'])
+        tax=float(request.form['tax'])
+        mealcost=float(request.form['mealcost'])
+        mealplustax = mealcost * tax + mealcost * tip + mealcost
+        finishtax = mealcost * tax
+        mealplustip = mealcost * tip
         return render_template('newer.html',
-                               tip=request.form['tip'],
-							   mealcost=request.form['mealcost'],
-                               tax=request.form['tax'])
-
+                               tip=tip,
+                               mealcost=mealcost,
+                               tax=tax,
+                               mealplustax=mealplustax,
+                               finishtax = finishtax,
+                               mealplustip = mealplustip)
+                               
 if __name__ == "__main__":
     app.run(debug=True)

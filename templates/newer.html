@@ -7,14 +7,17 @@
 	  <input type= 'text' value='tip' name='tip'/>
       <input type= 'submit' value='compute'/>
     </form>
-	{% if tip %}
-		<p>Tip equals: {{tip}}</p>
+    {% if mealcost %}
+        <p>Mealcost: {{mealcost}}</p>
+    {% endif %}    
+	{% if mealplustip %}
+		<p>Tip equals: {{mealplustip}}</p>
 	{% endif %}
-	{% if mealcost %}
-		<p>Cost of meal equals: {{mealcost}}</p>
+    {% if finishtax %}
+		<p>Tax equals: {{finishtax}}</p>
 	{% endif %}
-	{% if tax %}
-		<p>Tax equals: {{tax}}</p>
+	{% if mealplustax %}
+		<p>Total equals: {{mealplustax}}</p>
 	{% endif %}
   </body>
 {% endblock %}
