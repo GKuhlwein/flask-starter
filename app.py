@@ -12,6 +12,18 @@ def example_form():
     elif request.method == 'POST':
         return render_template('greeting.html',
                                fullname=request.form['fullname'])
+
+@app.route("/madlib", methods=["GET","POST"])
+def madlib():
+    if request.method == 'GET':
+        return render_template('madlibs.html')
+    elif request.method == 'POST':
+        Madlib2=request.form['Madlib2']
+        Madlib=request.form['Madlib']
+        return render_template('madlibs.html',
+                                Madlib=Madlib,
+                                Madlib2=Madlib2)
+
 @app.route("/my-new-page", methods=["GET","POST"])
 def my_new_function():
     print 'HELLO FROM MY NEW FUNCTION'

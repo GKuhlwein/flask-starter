@@ -1,0 +1,22 @@
+<html>
+  <head>
+  </head>  
+  <body>
+    <form action='/' method='post'>
+      <input type= 'text' name='number1'/>
+      <input type= 'text' name='number2'/>
+      <input type= 'submit' value='multiply'/>
+    </form>
+    <form action='/' method= 'post'>
+      <input type= 'text' name= 'number3'/>
+      <input type= 'text' name= 'number4'/>
+      <input type= 'submit' value='add'/>    
+    </form>
+    {% if equals %}
+        <p>{{number1}} * {{number2}} = {{equals}}</p>
+    {% endif %}    
+    {% if answer %}
+        <p>{{number3}} + {{number4}} = {{answer}}</p>
+    {% endif %}
+  </body>
+</html>

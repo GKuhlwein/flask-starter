@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <form action="/su3" method="Post"/>
+      <input type= 'text' name= 'Comment'/>
+      <input type= 'submit' value= 'Comment'/>
+    </form>
+  {% if Comment %}
+      <p>{{Comment}}</p>
+  {% endif %}
+  </body>
+</html>

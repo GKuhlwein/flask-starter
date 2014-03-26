@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+  <body>
+    <form action="/madlib" method="Post"/>
+      <p>Your name:</p>
+      <input type= 'text' name= 'Madlib'/>
+      <p>Your favorite food:</p>
+      <input type= 'text' name= 'Madlib2'/>
+      <input type= 'submit' value= 'Enter'/>
+    </form>
+    {% if Madlib and Madlib2 %}
+        <p>Once there was a person named <span>{{Madlib}}</span>. <span>{{Madlib}}'s</span> favorite food was <span>{{Madlib2}}</span>. Once <span>{{Madlib}}</span> ate so much <span>{{Madlib2}}</span> that he got sick. The next day, <span>{{Madlib}}</span> felt better and decided to never again eat so much <span>{{Madlib2}}</span>. The end.</p>
+    {% endif %}    
+  </body>
+{% endblock %}
