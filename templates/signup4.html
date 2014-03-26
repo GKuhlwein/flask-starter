@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  </head>
+  <body>
+    <form action= '/su4' method= 'Post'/>
+      <input type= 'text' name= 'modify'/>
+      <input type= 'submit' value= 'Enter'/>
+    </form>
+      <h1 style='color:{{modify}};'>Change my colors! Do whatever color you want.</h1>
+      {% if modify %}
+        <p style='color:{{modify}};'>Good choice! I like {{modify}}.</p>
+      {% endif %}
+  </body>
+</html>
