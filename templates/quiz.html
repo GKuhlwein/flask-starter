@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+  <body>
+    <form action="/quiz" method="Post">
+      <p>To tame a wolf in Minecraft your must feed it steak.</p>
+      <input type="radio" name="question1" value="true"/>True
+      <input type="radio" name="question1" value="false"/>False
+      <p>There are going to be Endermen in Minecarft PE 0.9.0.</p>
+      <input type="radio" name="question2" value="true"/>True
+      <input type="radio" name="question2" value="false"/>False
+      <p>In Minecraft 1.0.0 for the PC there aren't Redstone blocks.</p>
+      <input type="radio" name="question3" value="true"/>True
+      <input type="radio" name="question3" value="false"/>False
+      <p>A Creeper turns into a Charged Creeper when it is surrounded by TNT.</p>
+      <input type="radio" name="question4" value="true"/>True
+      <input type="radio" name="question4" value="false"/>False
+      <input type="submit" value="Enter"/>
+    </form>
+  </body>
+{% endblock %}

@@ -38,6 +38,35 @@ def my_new_function():
 def new():
     return render_template('new.html')
 
+@app.route("/quiz", methods=["GET","POST"])
+def quiz():
+    if request.method == 'GET':
+          return render_template('quiz.html')    
+    elif request.method == 'POST':
+        question1=request.form.get('question1','')
+        question2=request.form.get('question2','')
+        question3=request.form.get('question3','')
+        question4=request.form.get('question4','')
+        number_correct = 0
+        if question1 == 'false':
+            number_correct = number_correct + 25
+        if question2 == 'true':
+            number_correct = number_correct + 25
+        if question3 == 'true':
+            number_correct = number_correct + 25
+        if question4 == 'false':
+            number_correct = number_correct + 25
+            
+        totalscore= number_correct
+        
+        return render_template('quiz2.html', totalscore=totalscore)
+
+@app.route("/quiz2", methods=["GET","POST"])
+def quiz2():
+    if request.method == 'GET':
+          return render_template('quiz2.html')    
+                                                            
+                               
 @app.route("/tip", methods=["GET","POST"])
 def tip():
     if request.method == 'GET':
